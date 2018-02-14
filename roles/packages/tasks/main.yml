@@ -1,0 +1,16 @@
+---
+# tasks file for packages
+
+- name: Install packages for alfresco
+  apt: name={{item}} state=latest install_recommends=no update_cache=yes
+  with_items:
+    - fontconfig
+    - libsm6
+    - libice6
+    - libxrender1
+    - libxext6
+    - libcups2
+    - libglu1
+    - libcairo2
+    - libgl1-mesa-glx
+

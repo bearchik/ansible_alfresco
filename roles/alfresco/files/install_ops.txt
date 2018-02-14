@@ -1,0 +1,11 @@
+mode=unattended
+installer-language=en
+jdbc_url=jdbc:postgresql://localhost/alfresco
+jdbc_driver=org.postgresql.Driver
+jdbc_database=alfresco
+jdbc_username=alfresco
+jdbc_password=alfresco
+prefix=/opt/alfresco-community
+alfresco_admin_password=admin
+baseunixservice_install_as_service=1
+alfrescocustomstack_services_startup=auto

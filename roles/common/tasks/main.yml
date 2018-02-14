@@ -1,0 +1,6 @@
+---
+
+- name: install python packages required by ansible are installed
+  apt: name={{item}} state=installed
+  with_items:
+    - python-pycurl

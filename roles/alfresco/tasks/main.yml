@@ -1,0 +1,26 @@
+---
+# tasks file for alfresco
+
+- name: Upload alfresco installer
+  copy:
+    src: "{{ role_path }}/files/alfresco.bin"
+    dest: /tmp/alfresco.bin
+    mode: 755
+
+- name: Upload install config
+  copy:
+    src: "{{ role_path }}/files/install_ops.txt"
+    dest: /tmp/install_ops.txt
+
+- name: Install Alfresco
+  shell: cd /tmp && ./alfresco.bin --optionfile install_ops.txt
+
+- name: Start Alfresco
+  systemd:
+    name=alfresco
+    state=started
+
+- name: Enable Alfresco
+  systemd:
+    name: alfresco
+    enabled: yes
