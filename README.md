@@ -11,6 +11,9 @@ Ansible playbook for install Alfresco to Ubuntu or Debian
 - Change **../roles/alfresco/files/install_ops.txt** if this need.
 - Write your server ip or name in inventory file in **alfresco** group.
 - Run **ansible-playbook ./alfresco.yml** in console
+- Wait...Wait...Wait...
+- You can use default port for alfresco: **http://yourserver:8080/share** Login: **admin** Password: **admin**
+- Enjoy
 
 ## License
 BSD
